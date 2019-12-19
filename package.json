@@ -1,0 +1,19 @@
+{
+  "name": "rgbToHex",
+  "version": "1.0.0",
+  "description": "This module converts 3 rgb digits to css hex string",
+  "main": "index.js",
+  "author": "VMerk",
+  "repository": "https://github.com/VladimirMerk/rgbToHex",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./example/example.js",
+    "test": "npx mocha test"
+  },
+  "dependencies": {
+    "goss_concat": "^1.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}
