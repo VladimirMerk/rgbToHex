@@ -1,5 +1,4 @@
 "use strict";
-const concat = require('goss_concat');
 module.exports = (r = 255, g = 255, b = 255) => {
   let result = "";
   const validateOctet = (value) => {
@@ -11,7 +10,7 @@ module.exports = (r = 255, g = 255, b = 255) => {
     return value
   };
   const octetToHex = (value) => {
-    value = value.toString(16).toUpperCase();
+    value = value.toString(16).toLowerCase();
     return value.length < 2 ? concat('0', value) : value;
   };
 
@@ -19,10 +18,6 @@ module.exports = (r = 255, g = 255, b = 255) => {
   g = validateOctet(g);
   b = validateOctet(b);
 
-  result = concat(
-    '#',
-    octetToHex(r),
-    octetToHex(g),
-    octetToHex(b));
+  result = `#${octetToHex(r)}${octetToHex(g)}${octetToHex(b)}`;
   return result;
 };
